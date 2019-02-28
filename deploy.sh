@@ -10,7 +10,7 @@ docker push basurohan/multi-client:$SHA
 docker push basurohan/multi-server$SHA
 docker push basurohan/multi-worker:$SHA
 
-kubectl apply -f k8s
+kubectl apply -f K8s
 kubectl set image deployments/client-deployment client=basurohan/multi-client:$SHA
 kubectl set image deployments/server-deployment server=basurohan/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=basurohan/multi-worker:$SHA
